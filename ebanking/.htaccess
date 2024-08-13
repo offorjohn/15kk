@@ -1,0 +1,9 @@
+# Redirect ~/www/melrosecunion.com/ebanking/index.html to /~/www/melrosecunion.com/ebanking/
+RewriteEngine On
+
+# Redirect /ebanking/index.html to /ebanking/
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/your-folder/index\.html [NC]
+RewriteRule ^index\.html$ /ebanking/ [R=301,L]
+
+# Serve index.html when accessing /your-folder/
+DirectoryIndex index.html
